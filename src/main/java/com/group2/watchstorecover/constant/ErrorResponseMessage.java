@@ -1,2 +1,5 @@
-package com.group2.watchstorecover.constant;public class ErrorResponseMessage {
+package com.group2.watchstorecover.constant;
+
+public class ErrorResponseMessage {
+
 }

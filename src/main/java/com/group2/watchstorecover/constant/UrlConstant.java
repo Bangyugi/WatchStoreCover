@@ -1,2 +1,5 @@
-package com.group2.watchstorecover.constant;public class UrlConstant {
+package com.group2.watchstorecover.constant;
+
+public class UrlConstant {
+
 }
