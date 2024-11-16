@@ -6,16 +6,19 @@ import lombok.*;
 @Entity
 @Setter
 @Getter
+@IdClass(CategoryProduct.class)
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class CategoryProduct {
 
     @Id
-            @ManyToOne @JoinColumn(name = "category_id")
+    @ManyToOne
+    @JoinColumn(name = "category_id")
     Category category;
     @Id
-            @ManyToOne @JoinColumn(name = "product_id")
+    @ManyToOne
+    @JoinColumn(name = "product_id")
 
     Product product;
 }

@@ -41,6 +41,14 @@ public class Account implements UserDetails {
     Customer customer;
 
 
+    /**
+     * {@inheritDoc}
+     *
+     * <p>Returns a collection of {@link SimpleGrantedAuthority} instances,
+     * each containing the role name of the user's assigned role.
+     *
+     * @return a collection of granted authorities
+     */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.getRoleName()));
