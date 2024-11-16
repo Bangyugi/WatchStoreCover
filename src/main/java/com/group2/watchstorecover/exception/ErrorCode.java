@@ -1,5 +1,7 @@
 package com.group2.watchstorecover.exception;
 
+import com.group2.watchstorecover.constant.ErrorResponseCode;
+import com.group2.watchstorecover.constant.ErrorResponseMessage;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.experimental.FieldDefaults;
@@ -8,7 +10,13 @@ import lombok.experimental.FieldDefaults;
 @Getter
 public enum ErrorCode {
     ERR_VALID(101,"Error not define"),
-    ERR_VALID_ARGUMENT(102,"Error not define")
+    ERR_VALID_ARGUMENT(102,"Error not define"),
+    ERR_ID_NOT_FOUND(ErrorResponseCode.ERR_ID_NOT_FOUND, ErrorResponseMessage.ERR_ID_NOT_FOUND),
+    ERR_CUSTOMER_EMAIL_INVALID(ErrorResponseCode.Customer.ERR_CUSTOMER_EMAIL_INVALID, ErrorResponseMessage.Customer.ERR_CUSTOMER_EMAIL_INVALID),
+    ERR_CUSTOMER_PHONE_INVALID(ErrorResponseCode.Customer.ERR_CUSTOMER_PHONE_INVALID, ErrorResponseMessage.Customer.ERR_CUSTOMER_PHONE_INVALID),
+    EMAIL_EXISTS(ErrorResponseCode.Customer.EMAIL_EXIST,ErrorResponseMessage.Customer.EMAIL_EXIST),
+    PHONE_EXISTS(ErrorResponseCode.Customer.PHONE_EXIST,ErrorResponseMessage.Customer.PHONE_EXIST),
+    EMAIL_NO_CHANGE(ErrorResponseCode.Customer.EMAIL_NO_CHANGE,ErrorResponseMessage.Customer.EMAIL_NO_CHANGE)
     ;
     int code;
     String message;

@@ -3,14 +3,18 @@ package com.group2.watchstorecover.dto.response;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-@Getter
+import java.util.List;
+
 @Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ApiResponse {
-    int code = 200;
-    Object data;
-    String message;
+public class PageCustom<T> {
+    int pageIndex;
+    int pageSize;
+    int totalPage;
+    List<T>content;
+    String sort;
 }
