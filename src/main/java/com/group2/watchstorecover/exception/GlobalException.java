@@ -2,7 +2,7 @@ package com.group2.watchstorecover.exception;
 
 
 
-import com.group2.watchstorecover.dto.response.ApiResponse;
+import com.group2.watchstorecover.dto.response.Response;
 import jakarta.transaction.TransactionalException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -21,11 +21,11 @@ public class GlobalException {
      */
     @ExceptionHandler(AppException.class)
     public ResponseEntity<?> appException(AppException appException) {
-        ApiResponse apiResponse = ApiResponse.builder()
+        Response response = Response.builder()
                 .code(appException.getErrorCode().getCode())
                 .message(appException.getErrorCode().getMessage())
                 .build();
-        return ResponseEntity.badRequest().body(apiResponse);
+        return ResponseEntity.badRequest().body(response);
     }
 
     /**
@@ -79,11 +79,11 @@ public class GlobalException {
             System.out.println("Error not define");
         }
 
-        ApiResponse apiResponse = ApiResponse.builder()
+        Response response = Response.builder()
                 .code(errorCode.getCode())
                 .message(errorCode.getMessage())
                 .build();
-        return ResponseEntity.badRequest().body(apiResponse);
+        return ResponseEntity.badRequest().body(response);
     }
 
     /**
@@ -96,10 +96,10 @@ public class GlobalException {
     public  ResponseEntity<?> illegalArgumentException(IllegalArgumentException illegalArgumentException){
         ErrorCode errorCode  = ErrorCode.ERR_VALID_ARGUMENT;
         errorCode.setMessage(illegalArgumentException.getMessage());
-        ApiResponse apiResponse = ApiResponse.builder()
+        Response response = Response.builder()
                 .code(errorCode.getCode())
                 .message(errorCode.getMessage())
                 .build();
-        return ResponseEntity.badRequest().body(apiResponse);
+        return ResponseEntity.badRequest().body(response);
     }
 }
