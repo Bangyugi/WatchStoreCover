@@ -16,7 +16,9 @@ public enum ErrorCode {
     ERR_CUSTOMER_PHONE_INVALID(ErrorResponseCode.Customer.ERR_CUSTOMER_PHONE_INVALID, ErrorResponseMessage.Customer.ERR_CUSTOMER_PHONE_INVALID),
     EMAIL_EXISTS(ErrorResponseCode.Customer.EMAIL_EXIST,ErrorResponseMessage.Customer.EMAIL_EXIST),
     PHONE_EXISTS(ErrorResponseCode.Customer.PHONE_EXIST,ErrorResponseMessage.Customer.PHONE_EXIST),
-    EMAIL_NO_CHANGE(ErrorResponseCode.Customer.EMAIL_NO_CHANGE,ErrorResponseMessage.Customer.EMAIL_NO_CHANGE)
+    EMAIL_NO_CHANGE(ErrorResponseCode.Customer.EMAIL_NO_CHANGE,ErrorResponseMessage.Customer.EMAIL_NO_CHANGE),
+    ERR_ADDRESS_EXISTS_FOR_CUSTOMER(ErrorResponseCode.Address.ERR_ADDRESS_EXISTS_FOR_CUSTOMER,ErrorResponseMessage.Address.ERR_ADDRESS_EXISTS_FOR_CUSTOMER),
+    ERR_CUSTOMER_NOT_CHANGE(ErrorResponseCode.Address.ERR_CUSTOMER_NOT_CHANGE,ErrorResponseMessage.Address.ERR_CUSTOMER_NOT_CHANGE)
     ;
     int code;
     String message;

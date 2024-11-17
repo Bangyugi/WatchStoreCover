@@ -9,4 +9,8 @@ public class ErrorResponseMessage {
         public final static String PHONE_EXIST = "Phone number already exists";
         public final static String EMAIL_NO_CHANGE = "Email cannot be changed";
     }
+    public static class Address{
+        public final static String ERR_ADDRESS_EXISTS_FOR_CUSTOMER = "Address already exists for customer";
+        public final static String ERR_CUSTOMER_NOT_CHANGE = "Customer cannot be changed";
+    }
 }
