@@ -30,6 +30,5 @@ public class Blog {
             @Column(columnDefinition = "DATE")
     Date blogCreateDate = new Date(System.currentTimeMillis());
     @ManyToOne @JoinColumn(name = "customer_id")
-
     Customer customer;
 }
