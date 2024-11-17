@@ -20,7 +20,7 @@ import java.util.List;
 @RestController
 @RequestMapping(UrlConstant.CustomerUrl.PREFIX)
 @RequiredArgsConstructor
-@Tag(name = "CUSTOMER API", description = "REST API CUSTOMER FOR FRONT-END DEVELOPER")
+@Tag(name = "CUSTOMER API", description = "API for customer")
 public class CustomerController {
 
     private final CustomerService customerService;
