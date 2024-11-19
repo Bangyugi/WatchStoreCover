@@ -24,7 +24,7 @@ public class Category {
             @Column(columnDefinition = "varchar(150)", unique = true, nullable = false)
     String categoryName;
 
-
+    @Builder.Default
     boolean categoryAvailable = true;
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
             @JsonIgnore

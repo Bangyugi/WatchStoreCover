@@ -13,4 +13,19 @@ public class ErrorResponseMessage {
     public static class Address{
         public final static String ERR_ADDRESS_EXISTS_FOR_CUSTOMER = "Address already exists for customer";
     }
+
+    public static class Category{
+        public final static String CATEGORY_EXISTS = "Category already exists";
+        public final static String CATEGORY_NOT_FOUND = "Category not found";
+    }
+
+    public static class Brand {
+        public final static String BRAND_EXISTS = "Brand already exists";
+        public final static String BRAND_NOT_FOUND = "Brand not found";
+    }
+
+    public static class Product{
+        public final static String PRODUCT_EXISTS ="Product already exists";
+        public final static String PRODUCT_NOT_FOUND="Product not found";
+    }
 }
