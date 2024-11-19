@@ -18,7 +18,13 @@ public enum ErrorCode {
     PHONE_EXISTS(ErrorResponseCode.Customer.PHONE_EXIST,ErrorResponseMessage.Customer.PHONE_EXIST),
     EMAIL_NO_CHANGE(ErrorResponseCode.Customer.EMAIL_NO_CHANGE,ErrorResponseMessage.Customer.EMAIL_NO_CHANGE),
     ERR_ADDRESS_EXISTS_FOR_CUSTOMER(ErrorResponseCode.Address.ERR_ADDRESS_EXISTS_FOR_CUSTOMER,ErrorResponseMessage.Address.ERR_ADDRESS_EXISTS_FOR_CUSTOMER),
-    ERR_CUSTOMER_NOT_CHANGE(ErrorResponseCode.Customer.ERR_CUSTOMER_NOT_CHANGE,ErrorResponseMessage.Customer.ERR_CUSTOMER_NOT_CHANGE)
+    ERR_CUSTOMER_NOT_CHANGE(ErrorResponseCode.Customer.ERR_CUSTOMER_NOT_CHANGE,ErrorResponseMessage.Customer.ERR_CUSTOMER_NOT_CHANGE),
+    CATEGORY_NOT_FOUND(ErrorResponseCode.Category.CATEGORY_NOT_FOUND,ErrorResponseMessage.Category.CATEGORY_NOT_FOUND),
+    CATEGORY_EXISTS(ErrorResponseCode.Category.CATEGORY_EXISTS,ErrorResponseMessage.Category.CATEGORY_EXISTS),
+    BRAND_NOT_FOUND(ErrorResponseCode.Brand.BRAND_NOT_FOUND,ErrorResponseMessage.Brand.BRAND_NOT_FOUND),
+    BRAND_EXISTS(ErrorResponseCode.Brand.BRAND_EXISTS,ErrorResponseMessage.Brand.BRAND_EXISTS),
+    PRODUCT_NOT_FOUND(ErrorResponseCode.Product.PRODUCT_NOT_FOUND,ErrorResponseMessage.Product.PRODUCT_NOT_FOUND),
+    PRODUCT_EXISTS(ErrorResponseCode.Product.PRODUCT_EXISTS,ErrorResponseMessage.Product.PRODUCT_EXISTS)
     ;
     int code;
     String message;

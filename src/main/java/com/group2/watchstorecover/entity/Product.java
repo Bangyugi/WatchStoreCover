@@ -39,9 +39,8 @@ public class Product {
     boolean productAvailable = true;
 
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "brand_id")
-    @JsonIgnore
     Brand brand;
     @OneToMany(mappedBy = "product", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonIgnore

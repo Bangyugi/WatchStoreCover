@@ -13,4 +13,18 @@ public class ErrorResponseCode {
     public static class Address{
         public final static int ERR_ADDRESS_EXISTS_FOR_CUSTOMER = 2001;
     }
+    public static class Category{
+        public final static int CATEGORY_EXISTS = 3001;
+        public final static int CATEGORY_NOT_FOUND = 3002;
+    }
+
+    public static class Brand{
+        public final static int BRAND_EXISTS = 4001;
+        public final static int BRAND_NOT_FOUND = 4002;
+    }
+
+    public static class Product {
+        public final static int PRODUCT_EXISTS=5001;
+        public final static int PRODUCT_NOT_FOUND=5002;
+    }
 }

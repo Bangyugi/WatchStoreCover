@@ -34,4 +34,31 @@ public class UrlConstant {
 
     }
 
+    public static class CategoryUrl{
+        public static final String PREFIX = "/api/categories";
+        public static final String GET_ALL = SEARCH;
+        public static final String GET_BY_ID = SEARCH+"/{categoryId}";
+        public static final String CREATE = "/create";
+        public static final String UPDATE = "/update/{categoryId}";
+        public static final String DELETE = "/delete/{categoryId}";
+    }
+
+    public static class BrandUrl{
+        public static final String PREFIX = "/api/brands";
+        public static final String GET_ALL = SEARCH;
+        public static final String GET_BY_ID = SEARCH + "/{brandId}";
+        public static final String CREATE = "/create";
+        public static final String UPDATE = "/update/{brandId}";
+        public static final String DELETE = "/delete/{brandId}";
+    }
+
+    public static class ProductUrl{
+        public static final String PREFIX = "/api/products";
+        public static final String GET_ALL =SEARCH;
+        public static final String GET_BY_ID = SEARCH + "/{productId}";
+        public static final String CREATE = "/create";
+        public static final String UPDATE = "/update/{productId}";
+        public static final String DELETE = "/delete/{productId}";
+    }
+
 }

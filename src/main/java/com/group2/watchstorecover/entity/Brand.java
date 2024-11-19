@@ -25,6 +25,7 @@ public class Brand {
 
     @Size(min = 100, message = "Brand details must have at least 100 character")
     String brandDetails;
+
     @Builder.Default
     boolean brandAvailable = true;
 
