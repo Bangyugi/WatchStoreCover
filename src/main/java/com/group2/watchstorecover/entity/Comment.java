@@ -20,7 +20,7 @@ import java.util.List;
 public class Comment {
 
     @Id
-            @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int commentId;
     @Column(columnDefinition = "text")
     String commentContent;
@@ -34,7 +34,8 @@ public class Comment {
     @ManyToOne @JoinColumn(name = "product_id")
     Product product;
 
-    @ManyToOne @JoinColumn(name = "commentParent_id")
+    @ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
+    @JoinColumn(name = "commentParent_id")
     Comment commentParent;
 
     @Builder.Default

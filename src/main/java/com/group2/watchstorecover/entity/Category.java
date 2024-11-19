@@ -26,7 +26,7 @@ public class Category {
 
     @Builder.Default
     boolean categoryAvailable = true;
-    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
             @JsonIgnore
     List<CategoryProduct> products;
 

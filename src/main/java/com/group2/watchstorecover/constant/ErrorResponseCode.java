@@ -9,6 +9,7 @@ public class ErrorResponseCode {
         public final static int PHONE_EXIST = 1004;
         public final static int EMAIL_NO_CHANGE = 1005;
         public final static int ERR_CUSTOMER_NOT_CHANGE = 1006;
+        public final static int CUSTOMER_NOT_FOUND = 1007;
     }
     public static class Address{
         public final static int ERR_ADDRESS_EXISTS_FOR_CUSTOMER = 2001;
@@ -26,5 +27,18 @@ public class ErrorResponseCode {
     public static class Product {
         public final static int PRODUCT_EXISTS=5001;
         public final static int PRODUCT_NOT_FOUND=5002;
+        public final static int PRODUCT_NOT_CHANGE=5003;
+        public final static int PRODUCT_DETAILS_NOT_FOUND=5004;
+        public final static int PRODUCT_DETAILS_EXISTS=5005;
+    }
+
+    public static class Cart{
+        public final static int CART_EXISTS=6001;
+        public final static int CART_NOT_FOUND=6002;
+    }
+
+    public static class Comment{
+        public final static int COMMENT_EXISTS=7001;
+        public final static int COMMENT_NOT_FOUND=7002;
     }
 }

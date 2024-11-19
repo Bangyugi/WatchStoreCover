@@ -18,4 +18,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
     @Query(value = "from Product p join fetch p.brand where p.productAvailable = :b")
     Page<Product> findAllByProductAvailable(boolean b, Pageable pageable);
+
+    @Query(value="from Product p join fetch p.brand where p.productAvailable = :b and p.productName like %:productName%")
+    Page<Product> findByProductNameContainsIgnoreCaseAndProductAvailable(String productName, boolean b,Pageable pageable);
 }

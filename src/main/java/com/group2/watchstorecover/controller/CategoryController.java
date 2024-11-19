@@ -1,8 +1,10 @@
 package com.group2.watchstorecover.controller;
 
 import com.group2.watchstorecover.constant.UrlConstant;
+import com.group2.watchstorecover.dto.request.CategoryProductRequest;
 import com.group2.watchstorecover.dto.request.CategoryRequest;
 import com.group2.watchstorecover.dto.response.Response;
+import com.group2.watchstorecover.service.CategoryProductService;
 import com.group2.watchstorecover.service.CategoryService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -21,6 +23,7 @@ import org.springframework.web.bind.annotation.*;
 public class CategoryController {
 
     private final CategoryService categoryService;
+    private final CategoryProductService categoryProductService;
 
     @Operation(summary = "Get all categories")
     @GetMapping(UrlConstant.CategoryUrl.GET_ALL)
@@ -60,5 +63,21 @@ public class CategoryController {
     private ResponseEntity<?> delete(@PathVariable("categoryId") int categoryId) {
         Response response = categoryService.deleteCategory(categoryId);
         return ResponseEntity.status(response.getCode()).body(response);
+    }
+
+    @Operation(summary = "Add category for product")
+    @PostMapping(UrlConstant.CategoryUrl.ADD_CATEGORY_TO_PRODUCT)
+    public ResponseEntity<?> addCategoryForProduct(@RequestBody CategoryProductRequest request){
+        Response response = categoryProductService.addCategoryProduct(request) ;
+        return ResponseEntity.status(response.getCode())
+                .body(response) ;
+    }
+
+    @Operation(summary = "Remove category for product")
+    @DeleteMapping(UrlConstant.CategoryUrl.REMOVE_CATEGORY_FROM_PRODUCT)
+    public ResponseEntity<?> deleteCategoryForProduct(@PathVariable("categoryId") int categoryId, @PathVariable("productId") int productId){
+        Response response = categoryProductService.deleteCategoryProduct(categoryId, productId) ;
+        return ResponseEntity.status(response.getCode())
+                .body(response) ;
     }
 }

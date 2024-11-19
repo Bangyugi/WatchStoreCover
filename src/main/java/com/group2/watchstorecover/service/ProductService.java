@@ -14,4 +14,6 @@ public interface ProductService {
     Response findAllProducts(Pageable pageable);
 
     Response findProductById(int productId);
+
+    Response findProductByProductName(String productName, Pageable pageable);
 }
