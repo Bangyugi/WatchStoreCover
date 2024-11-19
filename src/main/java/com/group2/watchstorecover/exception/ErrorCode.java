@@ -24,7 +24,10 @@ public enum ErrorCode {
     BRAND_NOT_FOUND(ErrorResponseCode.Brand.BRAND_NOT_FOUND,ErrorResponseMessage.Brand.BRAND_NOT_FOUND),
     BRAND_EXISTS(ErrorResponseCode.Brand.BRAND_EXISTS,ErrorResponseMessage.Brand.BRAND_EXISTS),
     PRODUCT_NOT_FOUND(ErrorResponseCode.Product.PRODUCT_NOT_FOUND,ErrorResponseMessage.Product.PRODUCT_NOT_FOUND),
-    PRODUCT_EXISTS(ErrorResponseCode.Product.PRODUCT_EXISTS,ErrorResponseMessage.Product.PRODUCT_EXISTS)
+    PRODUCT_EXISTS(ErrorResponseCode.Product.PRODUCT_EXISTS,ErrorResponseMessage.Product.PRODUCT_EXISTS),
+    PRODUCT_NOT_CHANGE(ErrorResponseCode.Product.PRODUCT_NOT_CHANGE,ErrorResponseMessage.Product.PRODUCT_NOT_CHANGE),
+    PRODUCT_DETAILS_NOT_FOUND(ErrorResponseCode.Product.PRODUCT_DETAILS_NOT_FOUND,ErrorResponseMessage.Product.PRODUCT_DETAILS_NOT_FOUND),
+    PRODUCT_DETAILS_EXISTS(ErrorResponseCode.Product.PRODUCT_DETAILS_EXISTS,ErrorResponseMessage.Product.PRODUCT_DETAILS_EXISTS)
     ;
     int code;
     String message;

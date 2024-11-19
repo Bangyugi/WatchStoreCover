@@ -27,5 +27,8 @@ public class ErrorResponseMessage {
     public static class Product{
         public final static String PRODUCT_EXISTS ="Product already exists";
         public final static String PRODUCT_NOT_FOUND="Product not found";
+        public final static String PRODUCT_NOT_CHANGE="Product cannot be changed";
+        public final static String PRODUCT_DETAILS_NOT_FOUND="This product does not have product details";
+        public final static String PRODUCT_DETAILS_EXISTS="Product details already exists for this product";
     }
 }

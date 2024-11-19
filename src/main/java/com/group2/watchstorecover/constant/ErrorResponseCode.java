@@ -26,5 +26,8 @@ public class ErrorResponseCode {
     public static class Product {
         public final static int PRODUCT_EXISTS=5001;
         public final static int PRODUCT_NOT_FOUND=5002;
+        public final static int PRODUCT_NOT_CHANGE=5003;
+        public final static int PRODUCT_DETAILS_NOT_FOUND=5004;
+        public final static int PRODUCT_DETAILS_EXISTS=5005;
     }
 }

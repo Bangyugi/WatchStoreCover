@@ -96,7 +96,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Response findProductById(int productId){
-        String field = "productId: " + productId;
+        String field = "productid: " + productId;
         Response response = (Response) redisService.hashGet(KEY,field);
         if (response == null){
             Product product = productRepository.findByProductIdAndProductAvailable(productId,true).orElseThrow(()-> new AppException(ErrorCode.PRODUCT_NOT_FOUND));
@@ -104,6 +104,28 @@ public class ProductServiceImpl implements ProductService {
                     .code(200)
                     .data(product)
                     .message("Get single product by id successfully")
+                    .build();
+            redisService.hashSet(KEY,field,response);
+        }
+        return response;
+    }
+
+    @Override
+    public Response findProductByProductName(String productName, Pageable pageable){
+        String field = productName + ":" + pageable.toString();
+        Response response = (Response) redisService.hashGet(KEY,field);
+        if (response == null){
+            Page<Product> page = productRepository.findByProductNameContainsIgnoreCaseAndProductAvailable(productName,true,pageable);
+            PageCustom<Product> pageCustom = PageCustom.<Product>builder()
+                    .pageIndex(page.getNumber()+1)
+                    .pageSize(page.getSize())
+                    .totalPage(page.getTotalPages())
+                    .content(page.getContent())
+                    .build();
+            response = Response.builder()
+                    .code(200)
+                    .message("get product by product name successfully")
+                    .data(pageCustom)
                     .build();
             redisService.hashSet(KEY,field,response);
         }

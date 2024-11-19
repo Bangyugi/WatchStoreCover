@@ -59,6 +59,16 @@ public class UrlConstant {
         public static final String CREATE = "/create";
         public static final String UPDATE = "/update/{productId}";
         public static final String DELETE = "/delete/{productId}";
+        public static final String GET_BY_NAME =SEARCH + "/name/{productName}";
+    }
+
+    public static class ProductDetailsUrl{
+        public static final String PREFIX = "/api/product-details";
+        public static final String GET_ALL =SEARCH;
+        public static final String GET_BY_ID = SEARCH + "/{productDetailsId}";
+        public static final String CREATE = "/create";
+        public static final String UPDATE = "/update/{productDetailsId}";
+        public static final String GET_BY_PRODUCT_ID =SEARCH + "/product/{productId}";
     }
 
 }
