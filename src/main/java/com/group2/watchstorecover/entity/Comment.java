@@ -34,7 +34,8 @@ public class Comment {
     @ManyToOne @JoinColumn(name = "product_id")
     Product product;
 
-    @ManyToOne @JoinColumn(name = "commentParent_id")
+    @ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
+    @JoinColumn(name = "commentParent_id")
     Comment commentParent;
 
     @Builder.Default

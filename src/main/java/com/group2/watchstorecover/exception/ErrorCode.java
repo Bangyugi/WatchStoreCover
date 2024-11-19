@@ -27,7 +27,11 @@ public enum ErrorCode {
     PRODUCT_EXISTS(ErrorResponseCode.Product.PRODUCT_EXISTS,ErrorResponseMessage.Product.PRODUCT_EXISTS),
     PRODUCT_NOT_CHANGE(ErrorResponseCode.Product.PRODUCT_NOT_CHANGE,ErrorResponseMessage.Product.PRODUCT_NOT_CHANGE),
     PRODUCT_DETAILS_NOT_FOUND(ErrorResponseCode.Product.PRODUCT_DETAILS_NOT_FOUND,ErrorResponseMessage.Product.PRODUCT_DETAILS_NOT_FOUND),
-    PRODUCT_DETAILS_EXISTS(ErrorResponseCode.Product.PRODUCT_DETAILS_EXISTS,ErrorResponseMessage.Product.PRODUCT_DETAILS_EXISTS)
+    PRODUCT_DETAILS_EXISTS(ErrorResponseCode.Product.PRODUCT_DETAILS_EXISTS,ErrorResponseMessage.Product.PRODUCT_DETAILS_EXISTS),
+    CUSTOMER_NOT_FOUND(ErrorResponseCode.Customer.CUSTOMER_NOT_FOUND,ErrorResponseMessage.Customer.CUSTOMER_NOT_FOUND),
+    CART_EXISTS(ErrorResponseCode.Cart.CART_EXISTS,ErrorResponseMessage.Cart.CART_EXISTS),
+    CART_NOT_FOUND(ErrorResponseCode.Cart.CART_NOT_FOUND,ErrorResponseMessage.Cart.CART_NOT_FOUND),
+    COMMENT_NOT_FOUND(ErrorResponseCode.Comment.COMMENT_NOT_FOUND,ErrorResponseMessage.Comment.COMMENT_NOT_FOUND)
     ;
     int code;
     String message;

@@ -41,6 +41,8 @@ public class UrlConstant {
         public static final String CREATE = "/create";
         public static final String UPDATE = "/update/{categoryId}";
         public static final String DELETE = "/delete/{categoryId}";
+        public static final String ADD_CATEGORY_TO_PRODUCT = "/add-category-for-product";
+        public static final String REMOVE_CATEGORY_FROM_PRODUCT = "/remove-category-from-product/{categoryId}/{productId}";
     }
 
     public static class BrandUrl{
@@ -69,6 +71,28 @@ public class UrlConstant {
         public static final String CREATE = "/create";
         public static final String UPDATE = "/update/{productDetailsId}";
         public static final String GET_BY_PRODUCT_ID =SEARCH + "/product/{productId}";
+    }
+
+    public static class CartUrl{
+        public static final String PREFIX = "/api/carts";
+        public static final String GET_BY_ID = SEARCH + "/{customerId}/{productId}";
+        public static final String CREATE = "/create";
+        public static final String UPDATE = "/update";
+        public static final String DELETE = "/delete/{customerId}/{productId}";
+        public static final String GET_BY_CUSTOMER_ID=SEARCH+"/customer/{customerId}";
+        public static final String GET_BY_PRODUCT_ID=SEARCH+"/product/{productId}";
+    }
+
+    public static class CommentUrl{
+        public static final String PREFIX = "/api/comments";
+        public static final String GET_BY_ID =SEARCH + "/{commentId}";
+        public static final String GET_BY_PRODUCT_ID=SEARCH+"/product/{productId}";
+        public static final String Get_BY_COMMENT_ID=SEARCH+"/parent/{commentParentId}";
+        public static final String GET_BY_CUSTOMER_ID=SEARCH+"/customer/{customerId}";
+        public static final String CREATE = "/create";
+        public static final String UPDATE = "/update/{commentId}";
+        public static final String DELETE = "/delete/{commentId}";
+
     }
 
 }
