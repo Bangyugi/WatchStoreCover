@@ -41,4 +41,20 @@ public class ErrorResponseCode {
         public final static int COMMENT_EXISTS=7001;
         public final static int COMMENT_NOT_FOUND=7002;
     }
+
+    public static class Account{
+        public final static int ACCOUNT_ALREADY_EXISTS=8001;
+        public final static int ACCOUNT_NOT_FOUND=8002;
+        public final static int ACCOUNT_UNAUTHENTICATED=8003;
+        public final static int ACCOUNT_UNAUTHORIZED=8004;
+    }
+
+    public static class Role{
+        public final static int ROLE_EXISTS=9001;
+        public final static int ROLE_NOT_FOUND=9002;
+    }
+
+    public static class Token{
+        public final static int TOKEN_EXPIRED=10001;
+    }
 }

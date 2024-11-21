@@ -95,4 +95,12 @@ public class UrlConstant {
 
     }
 
+    public static class AccountUrl {
+        public static final String PREFIX = "/api/accounts";
+        public static final String GET_BY_ID = SEARCH + "/{accountId}";
+        public static final String GET_ALL = SEARCH;
+        public static final String CREATE = "/create";
+        public static final String UPDATE = "/update/{accountId}";
+        public static final String DELETE = "/delete/{accountId}";
+    }
 }

@@ -42,4 +42,19 @@ public class ErrorResponseMessage {
         public final static String COMMENT_EXISTS="Comment already exists";
         public final static String COMMENT_NOT_FOUND="Comment not found";
     }
+
+    public static class Account{
+        public final static String ACCOUNT_ALREADY_EXISTS="Account already exists";
+        public final static String ACCOUNT_NOT_FOUND="Account not found";
+        public final static String ACCOUNT_UNAUTHENTICATED="Account is not authenticated";
+        public final static String ACCOUNT_UNAUTHORIZED="Account is not authorized";
+    }
+
+    public static class Role{
+        public final static String ROLE_ALREADY_EXISTS="Role already exists";
+        public final static String ROLE_NOT_FOUND="Role not found";
+    }
+    public static class Token{
+        public final static String TOKEN_EXPIRED="Token is expired";
+    }
 }

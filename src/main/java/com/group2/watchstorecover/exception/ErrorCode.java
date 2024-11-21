@@ -31,7 +31,14 @@ public enum ErrorCode {
     CUSTOMER_NOT_FOUND(ErrorResponseCode.Customer.CUSTOMER_NOT_FOUND,ErrorResponseMessage.Customer.CUSTOMER_NOT_FOUND),
     CART_EXISTS(ErrorResponseCode.Cart.CART_EXISTS,ErrorResponseMessage.Cart.CART_EXISTS),
     CART_NOT_FOUND(ErrorResponseCode.Cart.CART_NOT_FOUND,ErrorResponseMessage.Cart.CART_NOT_FOUND),
-    COMMENT_NOT_FOUND(ErrorResponseCode.Comment.COMMENT_NOT_FOUND,ErrorResponseMessage.Comment.COMMENT_NOT_FOUND)
+    COMMENT_NOT_FOUND(ErrorResponseCode.Comment.COMMENT_NOT_FOUND,ErrorResponseMessage.Comment.COMMENT_NOT_FOUND),
+    ACCOUNT_ALREADY_EXISTS(ErrorResponseCode.Account.ACCOUNT_ALREADY_EXISTS,ErrorResponseMessage.Account.ACCOUNT_ALREADY_EXISTS),
+    ACCOUNT_NOT_FOUND(ErrorResponseCode.Account.ACCOUNT_NOT_FOUND,ErrorResponseMessage.Account.ACCOUNT_NOT_FOUND),
+    ROLE_NOT_FOUND(ErrorResponseCode.Role.ROLE_NOT_FOUND,ErrorResponseMessage.Role.ROLE_NOT_FOUND),
+    ROLE_EXISTS(ErrorResponseCode.Role.ROLE_EXISTS,ErrorResponseMessage.Role.ROLE_ALREADY_EXISTS),
+    ACCOUNT_UNAUTHENTICATED(ErrorResponseCode.Account.ACCOUNT_UNAUTHENTICATED,ErrorResponseMessage.Account.ACCOUNT_UNAUTHENTICATED),
+    ACCOUNT_UNAUTHORIZED(ErrorResponseCode.Account.ACCOUNT_UNAUTHORIZED,ErrorResponseMessage.Account.ACCOUNT_UNAUTHORIZED),
+    TOKEN_EXPIRED(ErrorResponseCode.Token.TOKEN_EXPIRED,ErrorResponseMessage.Token.TOKEN_EXPIRED),
     ;
     int code;
     String message;
